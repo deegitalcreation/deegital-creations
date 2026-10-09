@@ -1,0 +1,90 @@
+---
+const services = [
+  { number: "01", title: "Motion Video", text: "Engaging motion graphics for launches, promotions and social media." },
+  { number: "02", title: "2D Motion", text: "Illustrated movement and expressive visuals that bring ideas to life." },
+  { number: "03", title: "Custom Design", text: "Made-to-order visuals for invitations, packaging and your brand." },
+  { number: "04", title: "Print & Stationery", text: "Thoughtful designs for cards, stickers, sleeves and special occasions." }
+];
+const projects = [
+  { category: "WEDDING STATIONERY", title: "Made for your moment", className: "project-one" },
+  { category: "BRAND & PACKAGING", title: "Little details, big impact", className: "project-two" },
+  { category: "MOTION DESIGN", title: "Stories in motion", className: "project-three" }
+];
+const whatsappNumber = "60123456789"; // Replace with your WhatsApp number, digits only.
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi Deegital Creations! I'd like to enquire about your design services.")}`;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Deegital Creations — thoughtful graphic design, motion video and custom creative work." />
+    <meta name="theme-color" content="#f7f3ec" />
+    <title>Deegital Creations — Design with feeling</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root{--paper:#f7f3ec;--ink:#20201e;--muted:#716e67;--line:#ded8ce;--accent:#c26b4e;--sage:#dce2d4;--white:#fffdf9}
+      *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}
+      .nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-weight:700;letter-spacing:-.05em;font-size:22px}.brand span{color:var(--accent)}.navlinks{display:flex;align-items:center;gap:28px;font-size:13px;color:#55524c}.navlinks a:hover{color:var(--accent)}.nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;background:var(--ink);color:white;padding:13px 19px;border-radius:999px;font-size:13px;font-weight:600;transition:.2s}.nav-cta:hover,.button:hover{background:var(--accent);transform:translateY(-2px)}
+      .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center;padding:86px 0 92px}.eyebrow{font-size:11px;font-weight:700;letter-spacing:.19em;color:var(--accent);text-transform:uppercase}.hero h1{font-family:"Playfair Display",serif;font-size:clamp(48px,6.5vw,82px);line-height:1.02;letter-spacing:-.055em;font-weight:500;margin:22px 0}.hero h1 em{font-weight:500;color:var(--accent)}.hero p{font-size:16px;line-height:1.8;color:var(--muted);max-width:480px}.hero-actions{display:flex;gap:12px;align-items:center;margin-top:28px;flex-wrap:wrap}.button.light{background:transparent;color:var(--ink);border:1px solid var(--line)}.button.light:hover{border-color:var(--accent);color:var(--accent);background:transparent}.hero-note{font-size:12px;color:var(--muted);margin-top:22px}
+      .artboard{min-height:430px;position:relative;background:var(--sage);border-radius:48% 48% 14px 14px;overflow:hidden;display:grid;place-items:center}.sun{position:absolute;width:230px;height:230px;border-radius:50%;background:#e7b49a;top:44px;right:42px}.paper-card{position:relative;background:var(--white);width:65%;min-height:275px;padding:30px 26px;box-shadow:0 18px 45px #4c46351c;transform:rotate(-7deg);display:flex;flex-direction:column;justify-content:space-between}.paper-card .mini{font-size:9px;letter-spacing:.2em;color:var(--accent)}.paper-card strong{font-family:"Playfair Display",serif;font-size:clamp(26px,3vw,40px);line-height:1.08;font-weight:500}.paper-card .scribble{font-family:"Playfair Display",serif;font-style:italic;color:var(--accent);font-size:22px}.spark{position:absolute;font-size:48px;color:var(--accent);left:40px;bottom:40px}.float-tag{position:absolute;right:20px;bottom:42px;background:var(--white);padding:13px 17px;border-radius:12px;font-size:11px;box-shadow:0 10px 30px #4c46351a}
+      section{padding:76px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:34px}.section-head h2{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(34px,4vw,49px);letter-spacing:-.04em;margin:10px 0 0}.section-head p{max-width:350px;color:var(--muted);font-size:13px;line-height:1.7;margin:0}.services{background:var(--white)}.service-grid{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}.service{padding:26px 22px 28px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:45px 1fr;gap:12px}.service:nth-child(odd){margin-right:28px}.service .num{color:var(--accent);font-size:11px;padding-top:6px}.service h3{font-size:18px;margin:0 0 8px}.service p{font-size:13px;color:var(--muted);line-height:1.7;margin:0;max-width:420px}
+      .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project-visual{height:270px;border-radius:8px;display:grid;place-items:center;overflow:hidden;position:relative}.project-one{background:#e9d5c6}.project-two{background:#d9dfd0}.project-three{background:#e6c3b6}.mockup{width:64%;height:70%;background:var(--white);box-shadow:0 12px 35px #28201620;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center;transform:rotate(-5deg)}.project-two .mockup{transform:rotate(5deg);background:#f5eee2}.project-three .mockup{background:#282c27;color:#f7f3ec;transform:rotate(-3deg)}.mockup small{font-size:8px;letter-spacing:.2em;color:var(--accent)}.mockup strong{font-family:"Playfair Display",serif;font-size:clamp(19px,2.2vw,30px);line-height:1.1;margin:12px 0}.project-three .mockup small{color:#e7b49a}.project-meta{display:flex;justify-content:space-between;gap:10px;margin-top:15px}.project-meta span{font-size:10px;letter-spacing:.1em;color:var(--muted)}.project-meta h3{font-size:15px;margin:7px 0}
+      .pricing{background:var(--sage)}.price-row{display:grid;grid-template-columns:1fr auto;gap:20px;padding:23px 0;border-bottom:1px solid #c6cdbf;align-items:center}.price-row h3{font-size:16px;margin:0 0 6px}.price-row p{font-size:12px;color:#62685d;margin:0;line-height:1.6}.price{font-family:"Playfair Display",serif;font-size:22px;white-space:nowrap}.price-note{font-size:11px;color:#62685d;margin-top:20px;line-height:1.7}
+      .contact{background:#262722;color:var(--paper);text-align:center;padding:90px 0}.contact .eyebrow{color:#e7b49a}.contact h2{font-family:"Playfair Display",serif;font-size:clamp(40px,6vw,68px);font-weight:500;line-height:1.05;letter-spacing:-.04em;max-width:760px;margin:20px auto}.contact p{color:#c5c3ba;max-width:490px;margin:0 auto 26px;line-height:1.8;font-size:14px}.contact .button{background:#e7b49a;color:#262722}.footer{padding:25px 0;display:flex;justify-content:space-between;gap:16px;color:var(--muted);font-size:11px}.footer strong{color:var(--ink)}
+      @media(max-width:760px){.nav{height:72px}.navlinks{gap:13px}.navlinks>a:not(.nav-cta){display:none}.hero{grid-template-columns:1fr;gap:35px;padding:58px 0 68px}.artboard{min-height:340px}.section-head{align-items:start;flex-direction:column}.service-grid{grid-template-columns:1fr}.service:nth-child(odd){margin-right:0}.project-grid{grid-template-columns:1fr}.project-visual{height:320px}.price-row{grid-template-columns:1fr auto}.wrap{width:min(100% - 32px,1160px)}}
+    </style>
+  </head>
+  <body>
+    <header class="wrap nav">
+      <a class="brand" href="#home">deegital<span>.</span></a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#pricing">Pricing</a>
+        <a class="nav-cta" href={whatsappLink} target="_blank" rel="noopener">Let's talk ↗</a>
+      </nav>
+    </header>
+    <main>
+      <section class="wrap hero" id="home">
+        <div>
+          <div class="eyebrow">Independent creative studio</div>
+          <h1>Design that feels<br /><em>like you.</em></h1>
+          <p>Thoughtful visuals, playful motion and custom design made to bring your ideas to life. Let's make something lovely together.</p>
+          <div class="hero-actions"><a class="button" href="#portfolio">Explore our work ↗</a><a class="button light" href={whatsappLink} target="_blank" rel="noopener">Start a project</a></div>
+          <div class="hero-note">Graphic design · Motion video · Custom creations</div>
+        </div>
+        <div class="artboard" aria-label="Abstract design studio artwork">
+          <div class="sun"></div><div class="paper-card"><span class="mini">A LITTLE STUDIO WITH BIG IDEAS</span><strong>Made with<br />intention.</strong><span class="scribble">for your story ✳</span></div><span class="spark">✳</span><div class="float-tag">Thoughtful by design · Est. 2023</div>
+        </div>
+      </section>
+      <section class="services" id="services">
+        <div class="wrap">
+          <div class="section-head"><div><div class="eyebrow">What we can create</div><h2>Good ideas, beautifully made.</h2></div><p>From moving visuals to printed details, every piece is designed with care and a little personality.</p></div>
+          <div class="service-grid">
+            {services.map((service) => <article class="service"><span class="num">{service.number}</span><div><h3>{service.title}</h3><p>{service.text}</p></div></article>)}
+          </div>
+        </div>
+      </section>
+      <section id="portfolio" class="wrap">
+        <div class="section-head"><div><div class="eyebrow">A few creative directions</div><h2>Selected work & ideas.</h2></div><p>Replace these sample compositions with your real projects as your portfolio grows.</p></div>
+        <div class="project-grid">
+          {projects.map((project) => <article><div class={`project-visual ${project.className}`}><div class="mockup"><small>{project.category}</small><strong>{project.title}</strong><small>DEE GITAL CREATIONS</small></div></div><div class="project-meta"><div><span>{project.category}</span><h3>{project.title}</h3></div><span>↗</span></div></article>)}
+        </div>
+      </section>
+      <section class="pricing" id="pricing">
+        <div class="wrap">
+          <div class="section-head"><div><div class="eyebrow">A starting point</div><h2>Clear, simple pricing.</h2></div><p>Every project is different. Share your idea and we'll recommend the right option for your needs.</p></div>
+          <div class="price-row"><div><h3>Motion Video</h3><p>Existing template · 3–5 working days · 2 amendments</p></div><div class="price">From RM50</div></div>
+          <div class="price-row"><div><h3>2D Motion</h3><p>Custom movement and more detailed animation · 2 amendments</p></div><div class="price">From RM100</div></div>
+          <div class="price-row"><div><h3>Custom Design</h3><p>Made to your brief, scope and timeline</p></div><div class="price">Let's discuss</div></div>
+          <div class="price-note">Prices shown are introductory examples. Confirm your current rates and scope before publishing. Express service, RSVP websites, printing and add-ons can be quoted separately.</div>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <div class="wrap"><div class="eyebrow">Have something in mind?</div><h2>Let's turn your idea into something special.</h2><p>Tell us what you're dreaming up. We'll talk through your idea, timeline and the best way to bring it to life.</p><a class="button" href={whatsappLink} target="_blank" rel="noopener">Chat on WhatsApp ↗</a></div>
+      </section>
+    </main>
+    <footer class="wrap footer"><span><strong>deegital.</strong> © {new Date().getFullYear()} Deegital Creations</span><span>Made with care, in Malaysia.</span></footer>
+  </body>
+</html>
