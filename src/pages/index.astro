@@ -83,7 +83,7 @@ function renderFilters(){
 }
 function renderProducts(list=products){
  document.getElementById("products").innerHTML=list.map(p=>`<article class="product">
- <div class="thumb" style="background-image:url('${p.image.startsWith('/')?p.image:'/'+p.image}');background-size:cover;background-position:center"><span>${p.tag}<br><small style="font:10px 'DM Sans'">DESIGN PREVIEW</small></span></div>
+ <div class="thumb" style="background-image:url('${p.image.startsWith('/')?p.image:'/'+p.image}');background-size:cover;background-position:center">
  <div class="pbody"><h3>${p.name}</h3><div class="meta">${p.cat}</div><div class="prow"><span class="price">${money(p.price)}</span><button class="add" onclick="addToCart(${p.id})">Add to Cart</button></div></div>
  </article>`).join("");
 }
