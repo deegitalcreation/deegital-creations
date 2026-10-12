@@ -9,107 +9,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
-/* Shop section layout improvements */
-#shop .sectionhead {
-  display: grid;
-  grid-template-columns: 1fr 0.8fr;
-  gap: 48px;
-  align-items: center;
-  margin-bottom: 36px;
-}
-
-#shop .sectionhead h2 {
-  font-size: clamp(44px, 4.5vw, 58px);
-  line-height: 1.12;
-  margin-top: 12px;
-}
-
-#shop .sectionhead p {
-  font-size: 16px;
-  line-height: 1.8;
-  max-width: 440px;
-}
-
-#shop .grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 26px;
-}
-
-#shop .product {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  overflow: hidden;
-  min-width: 0;
-}
-
-#shop .thumb {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  height: auto;
-  display: block;
-  background-size: cover;
-  background-position: center;
-}
-
-#shop .pbody {
-  padding: 20px;
-}
-
-#shop .pbody h3 {
-  font-size: 17px;
-  line-height: 1.5;
-}
-
-#shop .filter {
-  padding: 10px 17px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: white;
-  font-size: 13px;
-}
-
-#shop .filter.active {
-  background: var(--ink);
-  color: white;
-  border-color: var(--ink);
-}
-
-#shop .add {
-  padding: 11px 16px;
-  border-radius: 999px;
-  background: var(--ink);
-  color: white;
-  border: 0;
-  font-size: 12px;
-}
-
-@media (max-width: 800px) {
-  #shop .sectionhead {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  #shop .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-  }
-}
-
-@media (max-width: 520px) {
-  #shop .grid {
-    grid-template-columns: 1fr;
-  }
-
-  #shop .sectionhead h2 {
-    font-size: 42px;
-  }
-
-  #shop .pbody {
-    padding: 16px;
-  }
-}
-
 <style>
 :root{--ink:#25211f;--muted:#766d68;--paper:#fbf8f4;--card:#fff;--line:#e9e1da;--accent:#9a665c;--accent2:#d8b8ad}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font-family:"DM Sans",sans-serif}
@@ -129,6 +28,32 @@ footer{padding:45px 0;color:var(--muted);font-size:13px}.footerrow{display:flex;
 .drawer{position:fixed;inset:0;z-index:50;pointer-events:none}.drawer.show{pointer-events:auto}.shade{position:absolute;inset:0;background:rgba(20,15,12,.35);opacity:0;transition:.25s}.drawer.show .shade{opacity:1}.panel{position:absolute;right:0;top:0;height:100%;width:min(430px,100%);background:#fff;padding:25px;transform:translateX(100%);transition:.3s;display:flex;flex-direction:column}.drawer.show .panel{transform:none}.panelhead{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:18px}.close{border:0;background:none;font-size:24px;cursor:pointer}.items{flex:1;overflow:auto;padding:15px 0}.item{display:flex;gap:13px;padding:15px 0;border-bottom:1px solid var(--line)}.itemimg{width:70px;height:70px;border-radius:12px;background:#eadbd4;display:grid;place-items:center;font-family:"Playfair Display",serif;font-size:10px;text-align:center}.iteminfo{flex:1}.iteminfo b{font-size:13px}.qty{display:flex;align-items:center;gap:10px;margin-top:8px}.qty button{width:25px;height:25px;border:1px solid var(--line);background:#fff;border-radius:50%;cursor:pointer}.checkout{border-top:1px solid var(--line);padding-top:18px}.total{display:flex;justify-content:space-between;font-weight:700;margin-bottom:15px}.empty{color:var(--muted);text-align:center;padding:45px 10px}
 @media(max-width:800px){.navlinks{display:none}.hero{grid-template-columns:1fr;gap:35px;padding-top:55px}.heroart{max-width:520px}.grid{grid-template-columns:repeat(2,1fr)}.aboutgrid{grid-template-columns:1fr;gap:20px}.cta{padding:35px;display:block}.cta .btn{margin-top:25px}.sectionhead{display:block}}
 @media(max-width:520px){.wrap{padding:0 17px}.grid{grid-template-columns:1fr}.hero h1{font-size:54px}.section{padding:55px 0}.hero{padding-bottom:45px}.footerrow{display:block}.footerrow div+div{margin-top:10px}}
+
+/* Shop layout improvements */
+#shop .sectionhead{display:grid;grid-template-columns:1fr .8fr;gap:48px;align-items:center;margin-bottom:36px}
+#shop .sectionhead h2{font-size:clamp(44px,4.5vw,58px);line-height:1.12;margin-top:12px}
+#shop .sectionhead p{font-size:16px;line-height:1.8;max-width:440px;margin:0}
+#shop .filters{gap:10px;margin-bottom:30px}
+#shop .grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+#shop .product{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;min-width:0;transition:transform .2s ease,box-shadow .2s ease}
+#shop .product:hover{transform:translateY(-3px);box-shadow:0 14px 35px rgba(65,40,30,.09)}
+#shop .thumb{width:100%;aspect-ratio:4/5;height:auto;display:block;background-color:#eee1da;background-size:cover;background-position:center;overflow:hidden}
+#shop .pbody{padding:20px}
+#shop .pbody h3{font-size:17px;line-height:1.5}
+#shop .filter{padding:10px 17px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:13px}
+#shop .filter.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+#shop .add{padding:11px 16px;border-radius:999px;background:var(--ink);color:#fff;border:0;font-size:12px}
+@media(max-width:800px){
+  #shop .sectionhead{grid-template-columns:1fr;gap:10px}
+  #shop .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+}
+@media(max-width:520px){
+  #shop .grid{grid-template-columns:1fr}
+  #shop .sectionhead h2{font-size:42px}
+  #shop .pbody{padding:16px}
+  #shop .prow{align-items:flex-start;flex-wrap:wrap}
+}
+
 </style>
 </head>
 <body>
@@ -185,7 +110,7 @@ function renderFilters(){
 }
 function renderProducts(list=products){
  document.getElementById("products").innerHTML=list.map(p=>`<article class="product">
- <div class="thumb" style="background-image:url('${p.image.startsWith('/')?p.image:'/'+p.image}');background-size:cover;background-position:center">
+ <div class="thumb" style="background-image:url('${p.image.startsWith('/')?p.image:'/'+p.image}');background-size:cover;background-position:center"></div>
  <div class="pbody"><h3>${p.name}</h3><div class="meta">${p.cat}</div><div class="prow"><span class="price">${money(p.price)}</span><button class="add" onclick="addToCart(${p.id})">Add to Cart</button></div></div>
  </article>`).join("");
 }
