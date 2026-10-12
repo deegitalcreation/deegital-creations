@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Deegital Creations — Admin</title>
+<style>
+body{font-family:Arial,sans-serif;background:#fbf8f4;color:#25211f;margin:0}.wrap{max-width:1000px;margin:auto;padding:30px 20px}
+header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e9e1da;padding-bottom:20px}.brand{font-weight:700;letter-spacing:.08em}
+.card{background:white;border:1px solid #e9e1da;border-radius:18px;padding:22px;margin-top:22px}.row{display:grid;grid-template-columns:1fr 1fr;gap:15px}label{font-size:12px;color:#766d68;display:block;margin-bottom:6px}input,select,textarea{width:100%;box-sizing:border-box;padding:11px;border:1px solid #ddd1ca;border-radius:10px;font:inherit}textarea{min-height:90px}.btn{border:0;border-radius:999px;padding:11px 17px;background:#25211f;color:white;cursor:pointer}.btn.alt{background:#eee5df;color:#25211f}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.product{display:grid;grid-template-columns:70px 1fr auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid #eee5df}.thumb{width:70px;height:70px;border-radius:12px;background:#eadbd4;background-size:cover;background-position:center}.muted{color:#766d68;font-size:13px}.status{font-size:12px;padding:5px 9px;border-radius:999px;background:#e8f3eb;color:#36724c}.hidden{background:#eee}.danger{background:#9a665c}
+</style></head><body><div class="wrap">
+<header><div><div class="brand">DEEGITAL CREATIONS</div><div class="muted">Product Manager · V2 Prototype</div></div><a href="index.html">View Store ↗</a></header>
+<div class="card"><h2>Add New Product</h2>
+<div class="row"><div><label>Product name</label><input id="name" placeholder="e.g. Floral Wedding Invitation"></div>
+<div><label>Price (RM)</label><input id="price" type="number" step="0.01" placeholder="35"></div>
+<div><label>Category</label><input id="category" placeholder="Wedding"></div>
+<div><label>Image filename</label><input id="image" value="placeholder.svg" placeholder="images/floral.jpg"></div></div>
+<div style="margin-top:15px"><label>Description</label><textarea id="description" placeholder="Short product description"></textarea></div>
+<div class="actions"><button class="btn" onclick="add()">Save Product</button><button class="btn alt" onclick="resetForm()">Clear</button></div>
+<p class="muted">Prototype note: this browser-only admin saves product data locally. The live version will use secure login, database and image storage.</p></div>
+<div class="card"><h2>Products</h2><div id="list"></div></div>
+</div>
+<script>
+const KEY="deegitalAdminProducts";let products=JSON.parse(localStorage.getItem(KEY)||"[]");
+async function seed(){if(!products.length){try{products=await (await fetch("data/products.json")).json();localStorage.setItem(KEY,JSON.stringify(products))}catch(e){}}render()}
+function save(){localStorage.setItem(KEY,JSON.stringify(products));render()}
+function add(){const name=document.getElementById("name").value.trim();if(!name)return alert("Please enter a product name.");const p={id:Date.now(),name,price:Number(document.getElementById("price").value||0),category:document.getElementById("category").value.trim()||"Other",image:document.getElementById("image").value.trim()||"placeholder.svg",description:document.getElementById("description").value.trim(),published:true};products.push(p);save();resetForm()}
+function del(id){products=products.filter(p=>p.id!==id);save()}
+function toggle(id){const p=products.find(p=>p.id===id);if(p)p.published=!p.published;save()}
+function resetForm(){["name","price","category","description"].forEach(id=>document.getElementById(id).value="");document.getElementById("image").value="placeholder.svg"}
+function render(){document.getElementById("list").innerHTML=products.map(p=>`<div class="product"><div class="thumb" style="background-image:url('${p.image}')"></div><div><b>${p.name}</b><div class="muted">${p.category} · RM${Number(p.price).toFixed(2)}</div></div><div><span class="status ${p.published?"":"hidden"}">${p.published?"Published":"Hidden"}</span><div class="actions"><button class="btn alt" onclick="toggle(${p.id})">${p.published?"Hide":"Publish"}</button><button class="btn danger" onclick="del(${p.id})">Delete</button></div></div></div>`).join("")||"<p class='muted'>No products yet.</p>"}
+seed()
+</script></body></html>

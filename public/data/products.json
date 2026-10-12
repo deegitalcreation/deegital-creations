@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Minimalist Wedding Invitation",
+    "category": "Wedding",
+    "price": 35.0,
+    "description": "A clean and elegant digital wedding invitation.",
+    "image": "placeholder.svg",
+    "published": true
+  },
+  {
+    "id": 2,
+    "name": "Elegant Floral Invitation",
+    "category": "Wedding",
+    "price": 45.0,
+    "description": "Soft floral invitation design for your special day.",
+    "image": "placeholder.svg",
+    "published": true
+  },
+  {
+    "id": 3,
+    "name": "Business Promo Poster",
+    "category": "Business",
+    "price": 25.0,
+    "description": "Modern promotional poster for your business.",
+    "image": "placeholder.svg",
+    "published": true
+  },
+  {
+    "id": 4,
+    "name": "Cute Event Poster",
+    "category": "Poster",
+    "price": 20.0,
+    "description": "Fun and friendly event poster design.",
+    "image": "placeholder.svg",
+    "published": true
+  },
+  {
+    "id": 5,
+    "name": "Instagram Promo Template",
+    "category": "Social Media",
+    "price": 30.0,
+    "description": "Ready-to-use social media promotional template.",
+    "image": "placeholder.svg",
+    "published": true
+  },
+  {
+    "id": 6,
+    "name": "Custom Illustration",
+    "category": "Illustration",
+    "price": 80.0,
+    "description": "Custom illustration service starting from RM80.",
+    "image": "placeholder.svg",
+    "published": true
+  }
+]
