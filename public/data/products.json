@@ -5,23 +5,23 @@
     "category": "Wedding",
     "price": 35.0,
     "description": "A clean and elegant digital wedding invitation.",
-    "image": "placeholder.svg",
+    "image": "afrina-cover-extracted.png",
     "published": true
   },
   {
     "id": 2,
     "name": "Elegant Floral Invitation",
     "category": "Wedding",
-    "price": 45.0,
+    "price": 35.0,
     "description": "Soft floral invitation design for your special day.",
-    "image": "placeholder.svg",
+    "image": "afrina-cover-extracted.png",
     "published": true
   },
   {
     "id": 3,
     "name": "Business Promo Poster",
     "category": "Business",
-    "price": 25.0,
+    "price": 35.0,
     "description": "Modern promotional poster for your business.",
     "image": "placeholder.svg",
     "published": true
