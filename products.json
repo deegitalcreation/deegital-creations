@@ -1,10 +1,46 @@
 {
   "products": [
-    {"name": "Minimalist Wedding Invitation", "cat": "Wedding", "price": 35, "image": "", "active": true},
-    {"name": "Elegant Floral Invitation", "cat": "Wedding", "price": 45, "image": "", "active": true},
-    {"name": "Birthday Invitation Card", "cat": "Birthday", "price": 25, "image": "", "active": true},
-    {"name": "Akikah Invitation Card", "cat": "Akikah", "price": 30, "image": "", "active": true},
-    {"name": "Cake Topper Design", "cat": "Topper", "price": 15, "image": "", "active": true},
-    {"name": "Business Sticker Pack", "cat": "Sticker", "price": 30, "image": "", "active": true}
+    {
+      "name": "Minimalist Wedding Invitation",
+      "cat": "Wedding",
+      "price": 35,
+      "image": "/images/uploads/afrina-cover-extracted.png",
+      "active": true
+    },
+    {
+      "name": "Elegant Floral Invitation",
+      "cat": "Wedding",
+      "price": 45,
+      "image": "/images/uploads/download - 2026-08-05T004643.504.jpg",
+      "active": true
+    },
+    {
+      "name": "Birthday Invitation Card",
+      "cat": "Birthday",
+      "price": 25,
+      "image": "",
+      "active": true
+    },
+    {
+      "name": "Akikah Invitation Card",
+      "cat": "Akikah",
+      "price": 30,
+      "image": "",
+      "active": true
+    },
+    {
+      "name": "Cake Topper Design",
+      "cat": "Topper",
+      "price": 15,
+      "image": "",
+      "active": true
+    },
+    {
+      "name": "Business Sticker Pack",
+      "cat": "Sticker",
+      "price": 30,
+      "image": "",
+      "active": true
+    }
   ]
 }
