@@ -1,7 +1,7 @@
-# GANTI "USERNAME/NAMA-REPO" dengan username GitHub dan nama repo awak, contoh: aisyah123/deegital-creations
+
 backend:
   name: github
-  repo: USERNAME/NAMA-REPO
+  repo:deegitalcreation/deegital-site
   branch: main
 
 media_folder: images/uploads
