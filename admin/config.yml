@@ -1,7 +1,7 @@
 
 backend:
   name: github
-  repo:deegitalcreation/deegital-site
+  repo: deegitalcreation/deegital-site
   branch: main
 
 media_folder: images/uploads
