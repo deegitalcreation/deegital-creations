@@ -1,0 +1,41 @@
+# GANTI "USERNAME/NAMA-REPO" dengan username GitHub dan nama repo awak, contoh: aisyah123/deegital-creations
+backend:
+  name: github
+  repo: USERNAME/NAMA-REPO
+  branch: main
+
+media_folder: images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: shop
+    label: Shop
+    files:
+      - name: products
+        label: Products
+        file: products.json
+        format: json
+        fields:
+          - label: Products
+            name: products
+            widget: list
+            label_singular: Product
+            summary: "{{fields.name}} - RM{{fields.price}}"
+            fields:
+              - { label: Name (mesti unik), name: name, widget: string }
+              - { label: Category, name: cat, widget: select, options: [Wedding, Birthday, Akikah, Topper, Sticker, Other] }
+              - { label: Price (RM), name: price, widget: number, value_type: float, min: 0 }
+              - { label: Image, name: image, widget: image, required: false }
+              - { label: Show on website, name: active, widget: boolean, default: true }
+      - name: settings
+        label: Website text and WhatsApp
+        file: settings.json
+        format: json
+        fields:
+          - { label: WhatsApp number (digits only, with 60), name: whatsapp, widget: string, hint: "Contoh 60174787651" }
+          - { label: WhatsApp number (as shown on site), name: whatsapp_display, widget: string }
+          - { label: Top banner (leave empty to hide), name: banner, widget: string, required: false }
+          - { label: Hero title, name: hero_title, widget: string }
+          - { label: Hero text, name: hero_text, widget: text }
+          - { label: About paragraph 1, name: about_text1, widget: text }
+          - { label: About paragraph 2, name: about_text2, widget: text }
